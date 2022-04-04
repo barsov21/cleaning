@@ -135,7 +135,8 @@
             }
         }
     }
-    .modal {
+    .modal,
+    .modal-sent {
         width: 1060px;
         height: 580px;
         &__img {
@@ -143,6 +144,9 @@
                 width: 480px;
             }
         }
+    }
+    .modal-sent__descr {
+        font-size: 22px;
     }
 }
 @media (max-width: 1300px) {
@@ -369,7 +373,7 @@
     }
     .our {
         &-block {
-            padding: 60px 0;
+            padding: 60px 10px;
             text-align: center;
             &__items {
                 justify-content: center;
@@ -413,8 +417,9 @@
             z-index: -1;
             top: 15px;
             right: 0;
+            width: 550px;
             img {
-                width: 600px;
+                width: 100%;
             }
         }
         &__content {
@@ -512,7 +517,8 @@
     .footer__menu {
         display: none;
     }
-    .modal {
+    .modal,
+    .modal-sent {
         width: 880px;
         padding: 70px 24px 60px 80px;
         &__form {
@@ -521,6 +527,18 @@
         &__img {
             img {
                 width: 400px;
+            }
+        }
+    }
+    .modal-sent {
+        padding: 130px 0 100px 60px;
+        &__wrapper {
+            justify-content: center;
+            align-items: center;
+        }
+        &__img {
+            img {
+                width: 350px;
             }
         }
     }
@@ -537,6 +555,11 @@
         }
         &__block-form {
             width: 720px;
+        }
+        &__block-label {
+            span {
+                right: 25px;
+            }
         }
         &__block-group {
             width: 340px;
@@ -601,6 +624,11 @@
     .galery__items--desctop .galery__item {
         display: none;
     }
+    .over {
+        &::after {
+            top: -250px;
+        }
+    }
     .section {
         &__purity {
             &::after {
@@ -639,6 +667,9 @@
         }   
     }
     .evaluate {
+        &::after {
+            top: -30px;
+        }
         &__wrapper {
             flex-direction: column;
             justify-content: center;
@@ -690,14 +721,15 @@
         }
     }
     .answers {
-        padding-top: 90px;
+        padding-top: 85px;
         &__title {
             font-size: 32px;
             line-height: 38px;
             margin-bottom: 55px;
         }
     }
-    .modal {
+    .modal,
+    .modal-sent {
         width: 700px;
         padding-top: 100px;
         padding-bottom: 100px;
@@ -714,6 +746,13 @@
         }
         &__form {
             margin: 0 auto;
+        }
+    }
+    .modal-sent {
+        padding: 100px 0 60px 0;
+        height: 500px;
+        &__img {
+            display: none;
         }
     }
 }
@@ -770,6 +809,11 @@
             line-height: 36px;
         }
     }
+    .over {
+        &::after {
+            top: -180px;
+        }
+    }
     .section {
         &__purity {
            overflow-x: hidden;
@@ -799,6 +843,9 @@
     }
     .evaluate {
         padding-top: 40px;
+        &::after {
+            top: -40px;
+        }
         &__title {
             text-align: center;
         }
@@ -880,7 +927,8 @@
             padding-left: 20px;
         }
     }
-    .modal {
+    .modal,
+    .modal-sent {
         padding-left: 0;
         width: 500px;
         &__content {
@@ -898,6 +946,9 @@
             bottom: 0;
             right: 0;
         }
+    }
+    .modal-sent {
+        height: 400px;
     }
 }
 @media (max-width: 576px) {
@@ -955,11 +1006,8 @@
             padding-top: 40px;
             width: 320px;
         }
-        &__block-button {
-            order: 1;
-        }
         &__block-text {
-            order: 2;
+            text-align: center;
         }
         &__block-form {
             width: 300px;
@@ -970,12 +1018,18 @@
         &__block-label {
             font-size: 16px;
             line-height: 18px;
+            span {
+                right: 20px;
+            }
         }
         &__block-input,
         &__select,
         &__block-button {
             width: 300px;
             height: 55px;
+        }
+        &__block-input {
+            padding: 0 19px;
         }
     }
     .about {
@@ -1025,7 +1079,7 @@
             margin-bottom: 40px;
         }
         &-block {
-            padding: 39px 0;
+            padding: 39px 10px;
             margin-bottom: 20px;
             &__title {
                 font-size: 18px;
@@ -1042,6 +1096,7 @@
             &__item {
                 font-size: 13px;
                 line-height: 17px;
+                margin: 0 10px 10px 0;
             }
             &__text {
                 width: 300px;
@@ -1076,7 +1131,7 @@
         }
         &__items--mobile {
             .galery__block {
-                padding: 40px 0 40px 10px;
+                padding: 40px 10px 40px 10px;
                 width: 320px;
                 height: 501px;
             }
@@ -1124,6 +1179,11 @@
                 width: 320px;
                 height: 501px;
             }
+        }
+    }
+    .over {
+        &::after {
+            display: none;
         }
     }
     .section {
@@ -1232,7 +1292,7 @@
             line-height: 27px;
         }
         &__item {
-            padding: 63px 0;
+            padding: 63px 10px;
         }
         &__item-icon {
             width: 64px;
@@ -1292,7 +1352,7 @@
         }
     }
     .footer {
-        padding: 85px 0 68px 0;
+        padding: 85px 0 40px 0;
         &::before {
             display: none;
         }
@@ -1322,12 +1382,12 @@
         &__link-phone {
             font-size: 20px;
             line-height: 24px;
-            margin: 0 auto;
+            margin-left: 30px;
             margin-bottom: 82px;
             &::before {
                 width: 20px;
                 height: 20px;
-                left: -25px;
+                left: -28px;
                 top: 50%;
                 transform: translateY(-50%);
             }
@@ -1383,6 +1443,46 @@
                 width: 20px;
                 height: 20px;
             }
+        }
+    }
+    .modal-sent {
+        padding: 76px 1px 109px 2px;
+        width: 320px;
+        height: 644px;
+        &__title {
+            font-size: 28px;
+            line-height: 34px;
+            margin-bottom: 15px;
+        }
+        &__descr {
+            font-size: 16px;
+            line-height: 20px;
+            margin-bottom: 20px;
+        }
+        &__button {
+            width: 300px;
+            height: 55px;
+        }
+        &__mobile {
+            display: block;
+        }
+    }
+}
+@media (max-width: 400px) {
+    .main {
+        position: relative;
+        &::before {
+            display: none;
+        }
+        &::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            top: 0;
+            left: 0;
+            background: url('../img/main-bg-mobile.png') center (center / cover) no-repeat;
+            height: 100%;
+            z-index: 1;
         }
     }
 }

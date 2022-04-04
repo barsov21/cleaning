@@ -2,22 +2,23 @@
     position: relative;
     background-color: #e5e5e5;
     padding-top: 80px;
-    z-index: 9;
     &::after {
         content: '';
         position: absolute;
         width: 100%;
-        height: 476px;
-        top: -200px;
+        height: 138px;
+        top: -50px;
         left: 0;
-        background: url('../img/evaluate/evaluate-bg.png') center no-repeat;
-        z-index: -1;
+        background: url('../img/evaluate/ebaluate-after.png') center no-repeat;
+        // z-index: -1;
     }
     &__wrapper {
         display: flex;
         justify-content: space-between;
         align-items: center;
         margin-bottom: 80px;
+        position: relative;
+        z-index: 50 !important;
     }
     &__items {
         display: flex;
@@ -25,6 +26,8 @@
     }
     &__arrows {
         display: flex;
+        position: relative;
+        z-index: 20;
     }
     &__arrow {
         width: 40px;

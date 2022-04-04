@@ -109,16 +109,21 @@
                         </div>
                     </div>
                     <div class="services__block-group">
-                        <label class="services__block-label">Площадь помещения</label>
-                        <input class="services__block-input" type="text">
+                        <label class="services__block-label">Площадь помещения
+                            <input class="services__block-input" type="text" placeholder="20">
+                            <span>м²</span>
+                        </label>
+                        <!-- <input class="services__block-input" type="text"> -->
                     </div>
                     <div class="services__block-group">
-                        <label class="services__block-label">Предварительная цена уборки</label>
-                        <input class="services__block-input" type="text">
+                        <label class="services__block-label">Предварительная цена уборки
+                            <input class="services__block-input" type="text" placeholder="0">
+                            <span>руб.</span>
+                        </label>
                     </div>
                     <div class="services__block-group">
                         <label class="services__block-label">Номер телефона</label>
-                        <input class="services__block-input" type="text">
+                        <input class="services__block-input" type="text" placeholder="+7 (927) 856-56-99">
                     </div>
                     <div class="services__block-group">
                         <span class="services__block-text">
@@ -778,68 +783,71 @@
             </div>
         </section>
 
-        <section class="section section__purity">
-            <picture class="section__image-purity">
-                <source srcset="./img/section/image-purity-mobile.png" media="(max-width: 767px)">
-                <img src="./img/section/image-purity.png" alt="image-purity">
-            </picture>
-            <div class="container">
-                <div class="section__content">
-                    <img src="./img/section/image-purity-mobile.png" alt="image-purity-mobile" class="section__image-mobile">
-                    <h2 class="title section__title">Вернем чистоту Вашего дома 
-                        <span class="title_blue">за 1 шаг</span>
-                    </h2>
-                    <div class="section__subtitle">
-                        Отправьте заявку, наш менеджер свяжется с вами 
-                        и уточнит все детали
+        <div class="over">
+            <section class="section section__purity">
+                <picture class="section__image-purity">
+                    <source srcset="./img/section/image-purity-mobile.png" media="(max-width: 767px)">
+                    <img src="./img/section/image-purity.png" alt="image-purity">
+                </picture>
+                <img class="section__absolute" src="./img/section/purity-absolute.png" alt="purity-absolute"> 
+                <div class="container">
+                    <div class="section__content">
+                        <img src="./img/section/image-purity-mobile.png" alt="image-purity-mobile" class="section__image-mobile">
+                        <h2 class="title section__title">Вернем чистоту Вашего дома 
+                            <span class="title_blue">за 1 шаг</span>
+                        </h2>
+                        <div class="section__subtitle">
+                            Отправьте заявку, наш менеджер свяжется с вами 
+                            и уточнит все детали
+                        </div>
+                        <form action="#" class="section__form">
+                            <input type="text" class="section__form-input" placeholder="Ваше имя">
+                            <input type="text" class="section__form-input" placeholder="Телефон">
+                            <button class="button section__form-button">Отправить заявку</button>
+                            <span class="section__form-text">
+                                Нажимая на кнопку, вы даете согласие на обработку
+                                персональных данных
+                            </span>
+                        </form>
                     </div>
-                    <form action="#" class="section__form">
-                        <input type="text" class="section__form-input">
-                        <input type="text" class="section__form-input" placeholder="Телефон">
-                        <button class="button section__form-button">Отправить заявку</button>
-                        <span class="section__form-text">
-                            Нажимая на кнопку, вы даете согласие на обработку
-                            персональных данных
-                        </span>
-                    </form>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <section id="evaluate" class="evaluate">
-            <div class="container">
-                <div class="evaluate__wrapper">
-                    <h2 class="title evaluate__title">Как люди <span class="title_blue">оценивают наши услуги</span></h2>
-                    <div class="evaluate__arrows">
-                        <img class="galery__arrow galery__arrow-prev" src="./icons/icon-prev.svg">
-                        <img class="galery__arrow galery__arrow-next" src="./icons/icon-next.svg">
+            <section id="evaluate" class="evaluate">
+                <!-- <img src="./img/evaluate/evaluate-after.png" alt="evaluate-after"> -->
+                <div class="container">
+                    <div class="evaluate__wrapper">
+                        <h2 class="title evaluate__title">Как люди <span class="title_blue">оценивают наши услуги</span></h2>
+                        <div class="evaluate__arrows">
+                            <img class="galery__arrow galery__arrow-prev" src="./icons/icon-prev.svg">
+                            <img class="galery__arrow galery__arrow-next" src="./icons/icon-next.svg">
+                        </div>
+                    </div>
+                    <div class="evaluate__items">
+                        <div class="evaluate__item">
+                            <img class="evaluate__image" src="./img/evaluate/evaluate-image-one.png" alt="evaluate-image-one">
+                            <a href="#" class="evaluate__button">
+                                <img src="./icons/evaluate/evaluate-play.svg" alt="evaluate-play">
+                            </a>
+                        </div>
+                        <div class="evaluate__item">
+                            <img class="evaluate__image" src="./img/evaluate/evaluate-image-two.png"
+                                alt="evaluate-image-one">
+                            <a href="#" class="evaluate__button">
+                                <img src="./icons/evaluate/evaluate-play.svg" alt="evaluate-play">
+                            </a>
+                        </div>
+                        <div class="evaluate__item">
+                            <img class="evaluate__image" src="./img/evaluate/evaluate-image-three.png"
+                                alt="evaluate-image-one">
+                            <a href="#" class="evaluate__button">
+                                <img src="./icons/evaluate/evaluate-play.svg" alt="evaluate-play">
+                            </a>
+                        </div>
                     </div>
                 </div>
-                <div class="evaluate__items">
-                    <div class="evaluate__item">
-                        <img class="evaluate__image" src="./img/evaluate/evaluate-image-one.png" alt="evaluate-image-one">
-                        <a href="#" class="evaluate__button">
-                            <img src="./icons/evaluate/evaluate-play.svg" alt="evaluate-play">
-                        </a>
-                    </div>
-                    <div class="evaluate__item">
-                        <img class="evaluate__image" src="./img/evaluate/evaluate-image-two.png"
-                            alt="evaluate-image-one">
-                        <a href="#" class="evaluate__button">
-                            <img src="./icons/evaluate/evaluate-play.svg" alt="evaluate-play">
-                        </a>
-                    </div>
-                    <div class="evaluate__item">
-                        <img class="evaluate__image" src="./img/evaluate/evaluate-image-three.png"
-                            alt="evaluate-image-one">
-                        <a href="#" class="evaluate__button">
-                            <img src="./icons/evaluate/evaluate-play.svg" alt="evaluate-play">
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
+            </section>
+        </div>
         <section class="features">
             <div class="container">
                 <h2 class="title features__title">Наши <span class="title_blue">преимущества для вас</span></h2>
@@ -1079,7 +1087,7 @@
         </footer>
     </div>
     
-    <div class="overlay">
+    <div class="overlay hide">
         <div class="modal">
             <div class="modal__close">
                 <img data-close src="icons/modal/modal-close.svg" alt="modal-close">
@@ -1109,27 +1117,29 @@
             </div>
         </div>
         <!-- /.modal -->
-<!-- 
-        <div class="modal-sent">
+
+        <!-- <div class="modal-sent">
             <div class="modal__close">
                 <img data-close src="icons/modal/modal-close.svg" alt="modal-close">
             </div>
             <div class="modal-sent__wrapper">
                 <div class="modal-sent__content">
+                    <img src="./img/modal/modal-sent-mobile.png" alt="modal-sent-mobile" class="modal-sent__mobile">
                     <h2 class="modal-sent__title">
-                        Заявка
+                        Ваша заявка <br>
                         отправлена!
                     </h2>
                     <p class="modal-sent__descr">
-                        Мы получили вашу заявку. <br>
-                        Наш менеджер свяжится с вами.
+                        Мы перезвоним в ближайшие минуты
                     </p>
+                    <button class="button modal-sent__button">Спасибо! Данные успешно отправлены!</button>
                 </div>
                 <div class="modal-sent__img">
-                    <img src="img/modal/modal-image.jpg" alt="modal-image">
+                    <img src="./img/modal/modal-sent-image.png" alt="modal-image">
                 </div>
             </div>
         </div>  -->
+        <!-- /.modal-sent -->
     </div>
     
     <script src="js/script.js"></script>

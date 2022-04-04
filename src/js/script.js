@@ -13,8 +13,8 @@ selectSingle_title.addEventListener('click', () => {
 
 // Close when click to option
 for (let i = 0; i < selectSingle_labels.length; i++) {
-    selectSingle_labels[i].addEventListener('click', (evt) => {
-        selectSingle_title.textContent = evt.target.textContent;
+    selectSingle_labels[i].addEventListener('click', (e) => {
+        selectSingle_title.textContent = e.target.textContent;
         selectSingle.setAttribute('data-state', '');
     });
 }
@@ -49,9 +49,11 @@ triggersSelector.forEach(btn => {
         const sibling = btn.closest('.answers__item-title').nextElementSibling;
 
         sibling.classList.toggle('answers__text');
-        sibling.style.height = '100%';
+        sibling.style.margin = '0 0 30px 5px';
     });
 });
+
+// Slider
 
 const sliders = (slides, dir, prev, next) => {
     let slideIndex = 1;
@@ -101,6 +103,8 @@ const sliders = (slides, dir, prev, next) => {
 
 sliders('.galery__item', '', '.galery__arrow-prev', '.galery__arrow-next');
 
+// Modal
+
 const modalTrigger = document.querySelectorAll('[data-modal]'),
     overlay = document.querySelector('.overlay');
 
@@ -123,7 +127,7 @@ function closeModal() {
 }
 
 overlay.addEventListener('click', (e) => {
-    if (e.target === overlay || e.target.getAttribute('data-close') == "") {
+    if ( e.target.getAttribute('data-close') == "") {
         closeModal();
     }
 });
