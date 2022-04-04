@@ -1,7 +1,91 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;800;900&display=swap');
 
+@import 'libs/animate';
 * {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+    color: #0d0d0d;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+body {
+    max-width: 1920px;
+    margin: 0 auto;
+}
+
+ul, li {
+    list-style: none;
     margin: 0;
     padding: 0;
 }
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    font-size: inherit;
+}
+
+.main {
+    position: relative;
+    &::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        top: 0;
+        left: 0;
+        background: url('../img/main-bg.png') center (center / cover) no-repeat !important;
+        height: 11042px;
+        z-index: 8;
+    }
+}
+
+.container {
+    width: 1420px;
+    margin: 0 auto;
+}
+
+
+.show {
+    // display: block;
+    opacity: 1;
+    visibility: visible;
+    transition: all 0.5s;
+}
+
+.hide {
+    // display: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s;
+}
+
+
+@import 'blocks/header';
+@import 'blocks/services';
+@import 'blocks/buttons';
+@import 'blocks/about';
+@import 'blocks/safety';
+@import 'blocks/titles';
+@import 'blocks/our';
+@import 'blocks/galery';
+@import 'blocks/section';
+@import 'blocks/evaluate';
+@import 'blocks/features';
+@import 'blocks/order';
+@import 'blocks/answers';
+@import 'blocks/footer';
+@import 'blocks/modal';
+@import 'blocks/media';

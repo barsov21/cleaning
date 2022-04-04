@@ -1,0 +1,65 @@
+.order {
+    padding-top: 150px;
+    padding-bottom: 170px;
+    background-color: #e5e5e5;
+    overflow: hidden;
+    &__title {
+        text-align: center;
+        margin-bottom: 80px;
+    }
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        width: 1328px;
+        margin: 0 auto;
+    }
+    &__wrapper-image {
+        position: relative;
+        width: 265px;
+        height: 265px;
+        &:first-of-type {
+            position: relative;
+            &::before {
+                content: '';
+                position: absolute;
+                bottom: -20px;
+                right: -40px;
+                width: 55px;
+                height: 56px;
+                background: url('../icons/order/image-1-before.svg') center no-repeat;
+            }
+        }
+        &:nth-child(2) {
+            position: relative;
+            width: 293px;
+            height: 293px;
+            transform: translateY(173px);
+            &::before {
+                content: '';
+                position: absolute;
+                bottom: 190px;
+                right: -70px;
+                width: 63px;
+                height: 50px;
+                background: url('../icons/order/image-2-before.svg') center no-repeat;
+            }
+        }
+        &:nth-child(3) {
+            position: relative;
+            width: 300px;
+            height: 300px;
+            &::before {
+                content: '';
+                position: absolute;
+                bottom: 90px;
+                right: -70px;
+                width: 66px;
+                height: 37px;
+                background: url('../icons/order/image-3-before.svg') center no-repeat;
+            }
+        }
+        &:last-child {
+            transform: translateY(143px);
+        }
+    }
+}

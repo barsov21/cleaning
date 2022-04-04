@@ -1,0 +1,202 @@
+.galery {
+    position: relative;
+    padding: 150px 0;
+    background-color: #e5e5e5;
+    &__wrapper {
+        margin-bottom: 80px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        z-index: 20;
+    }
+    &__arrows {
+        display: flex;
+    }
+    &__arrow {
+        position: relative;
+        z-index: 25;
+        width: 40px;
+        height: 40px;
+        border-radius: 100%;
+        cursor: pointer;
+    }
+    &__arrow-next {
+        margin-left: 20px;
+    }
+    &__items {
+        .galery__items--mobile {
+            display: none !important;
+        }
+        .galery__items--mobile .galery__item {
+            display: none !important;
+        }
+    }
+    &__item {
+        position: relative;
+        z-index: 25;
+        .wrapper {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+    &__block {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        position: relative;
+        padding: 51px 0 52px 78px;
+        z-index: 25;
+        width: 700px;
+        height: 592px;
+        background: #FFFFFF;
+        border-radius: 5px;
+    }
+    &__block--first {
+        position: relative;
+        z-index: 25;
+        &::before {
+            content: '';
+            position: absolute;
+            width: 460px;
+            height: 592px;
+            right: 0;
+            top: 0;
+            background: url('../img/galery/first-block-bg.png') center (center / cover) no-repeat;
+            z-index: -1;
+        }
+    }
+    &__block--second {
+        position: relative;
+        z-index: 25;
+        &::before {
+            content: '';
+            position: absolute;
+            width: 360px;
+            height: 591px;
+            right: 0;
+            top: 0;
+            z-index: -1;
+            background: url('../img/galery/second-block-bg.png') center (center / cover) no-repeat;
+        }
+    }
+    &__block--thrid {
+        position: relative;
+        z-index: 25;
+        &::before {
+            content: '';
+            position: absolute;
+            width: 480px;
+            height: 591px;
+            right: 0;
+            top: 0;
+            z-index: -1;
+            background: url('../img/galery/thrid-block-bg.png') center (center / cover) no-repeat;
+        }
+    }
+    &__block--fourth {
+        position: relative;
+        z-index: 25;
+        &::before {
+            content: '';
+            position: absolute;
+            width: 513px;
+            height: 591px;
+            right: 0;
+            top: 0;
+            z-index: -1;
+            background: url('../img/galery/fourth-block-bg.png') center (center / cover) no-repeat;
+        }
+    }
+    &__block--fifth {
+        position: relative;
+        z-index: 25;
+        &::before {
+            content: '';
+            position: absolute;
+            width: 460px;
+            height: 593px;
+            right: 0;
+            top: 0;
+            z-index: -1;
+            background: url('../img/galery/fifth-block-bg.png') center (center / cover) no-repeat;
+        }
+    }
+    &__block--sixth {
+        position: relative;
+        z-index: 25;
+        &::before {
+            content: '';
+            position: absolute;
+            width: 460px;
+            height: 591px;
+            right: 0;
+            top: 0;
+            z-index: -1;
+            background: url('../img/galery/sixth-block-bg.png') center (center / cover) no-repeat;
+        }
+    }
+    &__block--seventh {
+        position: relative;
+        z-index: 25;
+        &::before {
+            content: '';
+            position: absolute;
+            width: 460px;
+            height: 591px;
+            right: 0;
+            top: 0;
+            z-index: -1;
+            background: url('../img/galery/seventh-block-bg.png') center (center / cover) no-repeat;
+        }
+    }
+    &__block--eighth {
+        position: relative;
+        z-index: 25;
+        &::before {
+            content: '';
+            position: absolute;
+            width: 460px;
+            height: 587px;
+            right: 0;
+            top: 0;
+            z-index: -1;
+            background: url('../img/galery/eighth-block-bg.png') center (center / cover) no-repeat;
+        }
+    }
+    &__block-title {
+        font-weight: 900;
+        font-size: 30px;
+        line-height: 36px;
+        color: #0070AF;
+        margin-bottom: 40px;
+    }
+    &__block-item {
+        margin-bottom: 10px;
+        &:last-child {
+            margin-bottom: 20px;
+        }
+    }
+    &__block-text {
+        font-weight: 900;
+        font-size: 18px;
+        line-height: 22px;
+        text-decoration-line: underline;
+        margin-bottom: 5px;
+    }
+    &__block-descr {
+        font-size: 18px;
+        line-height: 22px;
+    }
+    &__block-price {
+        font-weight: 900;
+        font-size: 30px;
+        line-height: 39px;
+        color: #0070AF;
+        margin-bottom: 30px;   
+    }
+    &__block-button {
+        width: 360px;
+        height: 60px;
+    }
+}

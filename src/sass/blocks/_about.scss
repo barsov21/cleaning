@@ -1,0 +1,25 @@
+.about {
+    padding: 137px 0 49px 0;
+    &__wrapper {
+        display: flex;
+        align-items: center;
+    }
+    &__title {
+        position: relative;
+        z-index: 20;
+        margin-bottom: 40px;
+    }
+    &__wrapper-content {
+        max-width: 580px;
+        width: 100%;
+        margin-left: 20px;
+    }
+    &__content-descr {
+        font-size: 20px;
+        line-height: 26px;
+        margin-bottom: 30px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
