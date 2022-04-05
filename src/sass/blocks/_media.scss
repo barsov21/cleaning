@@ -553,6 +553,9 @@
             width: 745px;
             align-items: center;
         }
+        &__block-text {
+            text-align: center;
+        }
         &__block-form {
             width: 720px;
         }
@@ -784,6 +787,16 @@
                 margin-bottom: 19px;
             }
         }
+        &__block-text {
+            display: none;
+        }
+        &__block-text_mobile {
+            display: block;
+            text-align: center;
+        }
+        &__block-button {
+            margin-bottom: 15px;
+        }
     }
     .about {
         padding-top: 65px;
@@ -963,6 +976,12 @@
     }
     .header {
         padding: 10px 0;
+        &__menu {
+            height: 75vh;
+        }
+        &__link-phone_mobile {
+            left: 0;
+        }
     }
     .services {
         padding-top: 52px;
@@ -980,6 +999,7 @@
         &__image-mobile {
             position: relative;
             display: block;
+            margin: 10px auto;
             &::before {
                 content: '';
                 position: absolute;
@@ -1008,11 +1028,13 @@
             margin-bottom: 0;
         }
         &__block {
-            padding-top: 40px;
+            padding: 40px 0;
             width: 320px;
         }
-        &__block-text {
-            text-align: center;
+        &__block-text_mobile {
+            font-weight: 300;
+            font-size: 12px;
+            line-height: 15px;
         }
         &__block-form {
             width: 300px;
@@ -1084,6 +1106,8 @@
             margin-bottom: 40px;
         }
         &-block {
+            position: relative;
+            z-index: 5;
             padding: 39px 10px;
             margin-bottom: 20px;
             &__title {
@@ -1106,7 +1130,7 @@
             &__text {
                 width: 300px;
                 font-size: 16px;
-                line-height: 19px;
+                line-height: 21px;
                 margin-bottom: 10px;
             }
             &__price {
@@ -1193,10 +1217,12 @@
     }
     .section {
         &__questions {
-            padding-top: 80px;
-            padding-bottom: 51px;
+            padding-top: 29px;
+            padding-bottom: 0;
             background-color: #fff;
             .section__content {
+                position: relative;
+                z-index: 15;
                 margin: 0 auto;
             }
             &::before {
@@ -1204,22 +1230,28 @@
             }
         }
         &__purity {
-            // position: relative;
+            padding-bottom: 60px;
             .section__content {
+                position: relative;
                 margin: 0 auto;
             }
             &::after {
                 display: none;
             }
-            &::before {
-                content: '';
-                position: absolute;
-                width: 100%;
-                height: 320px;
-                top: -120px;
-                z-index: 555;
-                background: url('../img/section/purity-before-mobile.png') center no-repeat;
-            }
+        }
+        &__mobile--purity {
+            display: block;
+            position: absolute;
+            top: 170px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        &__mobile-two {
+            display: block;
+            position: absolute;
+            top: 225px;
+            left: 50%;
+            transform: translateX(-50%);
         }
         &__image-purity {
             display: none;
@@ -1272,7 +1304,7 @@
         &::before {
             content: '';
             position: absolute;
-            top: -55px;
+            top: -43px;
             width: 100%;
             height: 107px;
             background: url('../img/evaluate/evaluate-bg-mobile.png') center no-repeat;
@@ -1297,6 +1329,8 @@
             line-height: 27px;
         }
         &__item {
+            position: relative;
+            z-index: 10;
             padding: 63px 10px;
         }
         &__item-title {
@@ -1338,9 +1372,12 @@
         }
         &__item-title {
             max-width: 100%;
-            font-size: 16px;
-            line-height: 20px;
             margin-bottom: 10px;
+            p {
+                font-size: 16px;
+                line-height: 110%;
+                max-width: 240px;
+            }
             &::after {
                 width: 20px;
                 height: 20px;
@@ -1387,14 +1424,15 @@
         &__link-phone {
             font-size: 20px;
             line-height: 24px;
-            margin-left: 30px;
+            margin-left: 8px;
             margin-bottom: 82px;
             &::before {
                 width: 20px;
                 height: 20px;
-                left: -28px;
-                top: 50%;
-                transform: translateY(-50%);
+                left: 9px;
+                top: 3px;
+                // top: 50%;
+                // transform: translateY(-50%);
             }
         }
         &__copy {

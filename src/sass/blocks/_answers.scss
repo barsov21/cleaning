@@ -22,7 +22,7 @@
         font-size: 16px;
         line-height: 20px;
         max-width: 630px;
-        margin-bottom: 40px;
+        margin-bottom: 20px;
         margin-left: 4px;
         max-height: 0;
         overflow: hidden;
@@ -43,10 +43,14 @@
         border-radius: 5px;
         font-size: 18px;
         line-height: 22px;
-        color: #0070AF;
-        margin-bottom: 20px;
+        // margin-bottom: 20px;
         transition:  0.5s all;
         cursor: pointer;
+        p {
+            font-size: 18px;
+            line-height: 22px;
+            color: #0070AF;
+        }
         &::after {
             content: '';
             position: absolute;

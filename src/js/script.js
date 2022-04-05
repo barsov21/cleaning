@@ -3,6 +3,7 @@ const selectSingle_title = selectSingle.querySelector('.services__select-title')
 const selectSingle_labels = selectSingle.querySelectorAll('.services__select-label');
 
 // Toggle menu
+
 selectSingle_title.addEventListener('click', () => {
     if ('active' === selectSingle.getAttribute('data-state')) {
         selectSingle.setAttribute('data-state', '');
@@ -11,11 +12,12 @@ selectSingle_title.addEventListener('click', () => {
     }
 });
 
+
 // Close when click to option
 for (let i = 0; i < selectSingle_labels.length; i++) {
     selectSingle_labels[i].addEventListener('click', (e) => {
         selectSingle_title.textContent = e.target.textContent;
-        selectSingle.setAttribute('data-state', '');
+        selectSingle[i].setAttribute('data-state', '');
     });
 }
 
@@ -49,8 +51,10 @@ for (let i = 0; i < acc.length; i++) {
         
         if (sibling.style.maxHeight) {
             sibling.style.maxHeight = null;
+            // sibling.style.paddingTop = '0';
         } else {
             sibling.style.maxHeight = sibling.scrollHeight + "px";
+            // sibling.style.paddingTop = '20px';
         }
     });
 }

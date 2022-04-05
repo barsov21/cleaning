@@ -42,7 +42,7 @@
     }
     &__questions-image {
         position: absolute;
-        top: 100px;
+        top: 140px;
         right: 300px;
     }
     &__questions-mobile {
@@ -53,9 +53,15 @@
     }
     &__image-purity {
         position: absolute;
-        top: 0;
+        top: -42px;
         right: 147px;
         z-index: -1;
+    }
+    &__mobile--purity {
+        display: none;
+    }
+    &__mobile-two {
+        display: none;
     }
     &__content {
         position: relative;

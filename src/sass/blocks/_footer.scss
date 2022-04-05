@@ -62,10 +62,11 @@
         font-size: 20px;
         line-height: 24px;
         font-weight: 600;
+        padding: 1px 0 4px 40px;
         &::before {
             content: '';
             position: absolute;
-            left: -42px;
+            left: 0;
             width: 28px;
             height: 28px;
             background: url('../icons/header/icon-phone.svg') center (center / cover) no-repeat;

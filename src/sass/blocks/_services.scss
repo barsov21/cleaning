@@ -114,6 +114,9 @@
         max-width: 354px;
         margin-bottom: 10px;
     }
+    &__block-text_mobile {
+        display: none;
+    }
     &__block-button {
         width: 340px;
         height: 60px;
