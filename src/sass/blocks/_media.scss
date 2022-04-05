@@ -923,8 +923,13 @@
         }
     }
     .answers {
-        &__item-circle {
-            padding-left: 20px;
+        &__item-title {
+            &::after {
+                right: 10px;
+            }
+        }
+        &__item-text{
+            margin-bottom: 30px;
         }
     }
     .modal,
@@ -1294,10 +1299,6 @@
         &__item {
             padding: 63px 10px;
         }
-        &__item-icon {
-            width: 64px;
-            height: 64px;
-        }
         &__item-title {
             margin-bottom: 10px;
         }
@@ -1340,15 +1341,19 @@
             font-size: 16px;
             line-height: 20px;
             margin-bottom: 10px;
+            &::after {
+                width: 20px;
+                height: 20px;
+                border-radius: 100px;
+            }
         }
-        &__item-circle {
-            width: 20px;
-            height: 20px;
-            padding-left: 20px;
+        &__item-text{
+            margin-bottom: 30px;
         }
         &__text {
             font-size: 14px;
             line-height: 17px;
+            margin-bottom: 10px;
         }
     }
     .footer {

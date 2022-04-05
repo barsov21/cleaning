@@ -19,15 +19,14 @@
         width: 700px;
     }
     &__text {
-        display: none;
         font-size: 16px;
         line-height: 20px;
         max-width: 630px;
         margin-bottom: 40px;
         margin-left: 4px;
-        &_active {
-            display: block;
-        }
+        max-height: 0;
+        overflow: hidden;
+        transition: 0.3s ease-out;
     }
     &__item-title {
         position: relative;
@@ -46,15 +45,21 @@
         line-height: 22px;
         color: #0070AF;
         margin-bottom: 20px;
-    }
-    &__item-circle {
-        width: 30px;
-        height: 30px;
-        border-radius: 100%;
-        background-color: #0070AF;
+        transition:  0.5s all;
         cursor: pointer;
+        &::after {
+            content: '';
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            right: 15px;
+            background: url('../icons/answers/answers-icon.svg') center no-repeat;
+        }
     }
     &__title-mobile {
         display: none;
     }
+}
+.active::after {
+    background: url('../icons/answers/answers-icon-active.svg') center no-repeat;
 }

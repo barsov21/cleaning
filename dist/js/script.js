@@ -40,18 +40,20 @@ menuItem.forEach(item => {
 
 // showInfo
 
-const triggersSelector = document.querySelectorAll('.answers__item-circle');
+const acc = document.querySelectorAll('.answers__item-title');
 
-
-
-triggersSelector.forEach(btn => {
-    btn.addEventListener('click', () => {
-        const sibling = btn.closest('.answers__item-title').nextElementSibling;
-
-        sibling.classList.toggle('answers__text');
-        sibling.style.margin = '0 0 30px 5px';
+for (let i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function () {
+        this.classList.toggle("active");
+        let sibling = this.nextElementSibling;
+        
+        if (sibling.style.maxHeight) {
+            sibling.style.maxHeight = null;
+        } else {
+            sibling.style.maxHeight = sibling.scrollHeight + "px";
+        }
     });
-});
+}
 
 // Slider
 
