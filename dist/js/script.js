@@ -1,25 +1,26 @@
-const selectSingle = document.querySelector('.services__select');
-const selectSingle_title = selectSingle.querySelector('.services__select-title');
-const selectSingle_labels = selectSingle.querySelectorAll('.services__select-label');
+const selectList = [...document.querySelectorAll('.services__select')];
 
-// Toggle menu
+selectList.forEach(select => {
+    const selectTitle = select.querySelector('.services__select-title');
+    const selectLabels = select.querySelectorAll('.services__select-label');
 
-selectSingle_title.addEventListener('click', () => {
-    if ('active' === selectSingle.getAttribute('data-state')) {
-        selectSingle.setAttribute('data-state', '');
-    } else {
-        selectSingle.setAttribute('data-state', 'active');
-    }
-});
-
-
-// Close when click to option
-for (let i = 0; i < selectSingle_labels.length; i++) {
-    selectSingle_labels[i].addEventListener('click', (e) => {
-        selectSingle_title.textContent = e.target.textContent;
-        selectSingle[i].setAttribute('data-state', '');
+    // Toggle menu
+    selectTitle.addEventListener('click', () => {
+        if ('active' === select.getAttribute('data-state')) {
+            select.setAttribute('data-state', '');
+        } else {
+            select.setAttribute('data-state', 'active');
+        }
     });
-}
+
+    // Close when click to option
+    selectLabels.forEach(selectLabel => {
+        selectLabel.addEventListener('click', (e) => {
+            selectTitle.textContent = e.target.textContent;
+            select.setAttribute('data-state', '');
+        });
+    });
+});
 
 
 // Menu
@@ -141,5 +142,28 @@ overlay.addEventListener('click', (e) => {
 document.addEventListener('keydown', (e) => {
     if (e.code == "Escape" && overlay.classList.contains('show')) {
         closeModal();
+    }
+});
+
+
+new Swiper('.swiper', {
+    navigation: {
+        nextEl: '.galery__arrow-next',
+        prevEl: '.galery__arrow-prev'
+    },
+
+    slidesPerView: 3,
+
+    breakpoints: {
+        320: {
+            slidesPerView: 1,
+            spaceBetween: 10,
+        },
+        768: {
+            slidesPerView: 2
+        },
+        992: {
+            slidesPerView: 3
+        }
     }
 });

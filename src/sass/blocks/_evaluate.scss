@@ -20,10 +20,11 @@
         position: relative;
         z-index: 50 !important;
     }
-    &__items {
-        display: flex;
-        justify-content: space-between;
-    }
+    // &__items {
+    //     display: flex;
+    //     justify-content: space-between;
+    //     min-width: 0;
+    // }
     &__arrows {
         display: flex;
         position: relative;
@@ -40,6 +41,7 @@
     }
     &__item {
         position: relative;
+        width: auto;
     }
     &__button {
         position: absolute;

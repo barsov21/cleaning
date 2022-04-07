@@ -1,13 +1,45 @@
 .about {
+    position: relative;
+    z-index: 5;
     padding: 137px 0 49px 0;
     &__wrapper {
         display: flex;
+        justify-content: flex-end;
         align-items: center;
+    }
+    &__wrapper-item {
+        position: relative;
     }
     &__title {
         position: relative;
         z-index: 20;
         margin-bottom: 40px;
+    }
+    &__item-block--first {
+        position: absolute;
+        top: 20px;
+        left: -150px;
+    }
+    &__item-block--second {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: -250px;
+    }
+    &__item-block--thrid {
+        position: absolute;
+        left: -150px;
+        bottom: 20px;
+    }
+    &__item-text {
+        font-weight: 900;
+        font-size: 18px;
+        line-height: 22px;
+        margin-bottom: 10px;
+    }
+    &__descr {
+        font-size: 18px;
+        line-height: 22px;
     }
     &__wrapper-content {
         max-width: 580px;

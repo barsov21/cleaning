@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;800;900&display=swap');
 
+
 @import 'libs/animate';
+@import 'libs/swiper.min';
+
+
 * {
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
@@ -44,11 +48,10 @@ h1, h2, h3, h4, h5, h6 {
         content: '';
         position: absolute;
         width: 100%;
-        top: 80px;
         left: 0;
         background: url('../img/main-bg.png') center (center / cover) no-repeat !important;
         height: 100%;
-        z-index: 1;
+        z-index: 0;
         overflow-y: hidden;
     }
 }

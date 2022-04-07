@@ -126,7 +126,7 @@
         width: 340px;
         height: 60px;
         background-color: #fff;
-        // margin: 0 auto;
+        margin-top: 9px;
         &[data-state="active"] {
             .services__select-title {
                 &::before {
