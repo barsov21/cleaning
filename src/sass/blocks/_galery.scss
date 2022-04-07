@@ -10,8 +10,11 @@
         position: relative;
         z-index: 20;
     }
-    &__arrows {
+    &-arrows--desctop {
         display: flex;
+    }
+    &-arrows--mobile {
+        display: none;
     }
     &__arrow {
         position: relative;
@@ -24,13 +27,8 @@
     &__arrow-next {
         margin-left: 20px;
     }
-    &__items {
-        .galery__items--mobile {
-            display: none !important;
-        }
-        .galery__items--mobile .galery__item {
-            display: none !important;
-        }
+    &__items--mobile {
+        display: none;
     }
     &__item {
         position: relative;

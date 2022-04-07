@@ -654,14 +654,17 @@
         }
         &__items--desctop {
             display: none;
-            .galery__item {
-                display: none !important;
-            }
+        }
+        &-arrows--desctop {
+            display: none !important;
+        }
+        &-arrows--mobile {
+            display: flex;
         }
     }
-    .galery__items--desctop .galery__item {
-        display: none;
-    }
+    // .galery__items--desctop .galery__item {
+    //     display: none;
+    // }
     .over {
         &::after {
             top: -250px;
@@ -1043,6 +1046,14 @@
                 height: 1px;
                 width: 30px;
             }
+            &:hover {
+                &::before {
+                    left: 50%;
+                    bottom: -20px;
+                    transform: translateX(-50%);
+                    width: 50%;
+                }
+            }
         }
         &__link-phone {
             font-size: 20px;
@@ -1201,7 +1212,7 @@
         }
         &__image {
             position: relative;
-            left: 0;
+            right: 0;
             img {
                 width: 145px;
                 height: 338px;
@@ -1283,9 +1294,130 @@
         }
         &__items--mobile {
             .galery__block {
+                position: relative;
                 padding: 40px 10px 40px 10px;
                 width: 320px;
                 height: 501px;
+            }
+            .galery__block--first {
+                &::before {
+                    display: none;
+                }
+                &::after {
+                    content: '';
+                    position: absolute;
+                    width: 320px;
+                    height: 501px;
+                    top: 0;
+                    left: 0;
+                    background: url('../img/galery/first-block-mobile.png') center no-repeat;
+                    z-index: -1;
+                }
+            }
+            .galery__block--second {
+                &::before {
+                    display: none;
+                }
+                &::after {
+                    content: '';
+                    position: absolute;
+                    width: 320px;
+                    height: 501px;
+                    top: 0;
+                    left: 0;
+                    background: url('../img/galery/second-block-mobile.png') center no-repeat;
+                    z-index: -1;
+                }
+            }
+            .galery__block--thrid {
+                &::before {
+                    display: none;
+                }
+                &::after {
+                    content: '';
+                    position: absolute;
+                    width: 320px;
+                    height: 501px;
+                    top: 0;
+                    left: 0;
+                    background: url('../img/galery/thrid-block-mobile.png') center no-repeat;
+                    z-index: -1;
+                }
+            }
+            .galery__block--fourth {
+                &::before {
+                    display: none;
+                }
+                &::after {
+                    content: '';
+                    position: absolute;
+                    width: 320px;
+                    height: 501px;
+                    top: 0;
+                    left: 0;
+                    background: url('../img/galery/fourth-block-mobile.png') center no-repeat;
+                    z-index: -1;
+                }
+            }
+            .galery__block--fifth {
+                &::before {
+                    display: none;
+                }
+                &::after {
+                    content: '';
+                    position: absolute;
+                    width: 320px;
+                    height: 501px;
+                    top: 0;
+                    left: 0;
+                    background: url('../img/galery/fifth-block-mobile.png') center no-repeat;
+                    z-index: -1;
+                }
+            }
+            .galery__block--sixth {
+                &::before {
+                    display: none;
+                }
+                &::after {
+                    content: '';
+                    position: absolute;
+                    width: 320px;
+                    height: 501px;
+                    top: 0;
+                    left: 0;
+                    background: url('../img/galery/sixth-block-mobile.png') center no-repeat;
+                    z-index: -1;
+                }
+            }
+            .galery__block--seventh {
+                &::before {
+                    display: none;
+                }
+                &::after {
+                    content: '';
+                    position: absolute;
+                    width: 320px;
+                    height: 501px;
+                    top: 0;
+                    left: 0;
+                    background: url('../img/galery/seventh-block-mobile.png') center no-repeat;
+                    z-index: -1;
+                }
+            }
+            .galery__block--eighth {
+                &::before {
+                    display: none;
+                }
+                &::after {
+                    content: '';
+                    position: absolute;
+                    width: 320px;
+                    height: 501px;
+                    top: 0;
+                    left: 0;
+                    background: url('../img/galery/eighth-block-mobile.png') center no-repeat;
+                    z-index: -1;
+                }
             }
             .galery__block-title {
                 font-size: 18px;

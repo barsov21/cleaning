@@ -108,7 +108,8 @@ const sliders = (slides, dir, prev, next) => {
     } catch (e) {}
 };
 
-sliders('.galery__item', '', '.galery__arrow-prev', '.galery__arrow-next');
+sliders('.galery__item-desctop', '', '.galery__arrow-prev--desctop', '.galery__arrow-next--desctop');
+sliders('.galery__item-mobile', '', '.galery__arrow-prev--mobile', '.galery__arrow-next--mobile');
 
 // Modal
 
