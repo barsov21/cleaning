@@ -41,6 +41,10 @@ h1, h2, h3, h4, h5, h6 {
     margin: 0;
     font-size: inherit;
 }
+video {
+    width: 100%;
+    height: auto;
+}
 
 .main {
     position: relative;
@@ -91,6 +95,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
+
+.vissible {
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+
 @import 'blocks/header';
 @import 'blocks/services';
 @import 'blocks/buttons';
@@ -106,4 +117,5 @@ h1, h2, h3, h4, h5, h6 {
 @import 'blocks/answers';
 @import 'blocks/footer';
 @import 'blocks/modal';
+@import 'blocks/video';
 @import 'blocks/media';

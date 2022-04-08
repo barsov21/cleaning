@@ -111,6 +111,32 @@ const sliders = (slides, dir, prev, next) => {
 sliders('.galery__item-desctop', '', '.galery__arrow-prev--desctop', '.galery__arrow-next--desctop');
 sliders('.galery__item-mobile', '', '.galery__arrow-prev--mobile', '.galery__arrow-next--mobile');
 
+// Видео
+
+function video() {
+    const play = document.querySelectorAll('.evaluate__button'),
+            video = document.querySelector('#video'),
+            modalVideo = document.querySelector('.popup-video');
+
+    play.forEach(item => {
+        item.addEventListener('click', () => {
+            modalVideo.classList.add('popup--visible');
+            document.body.style.overflow = 'hidden';
+        });
+    });
+
+    modalVideo.addEventListener('click', (e) => {
+        if (e.target.classList.contains('popup--visible')) {
+            modalVideo.classList.remove('popup--visible');
+            video.pause();
+            document.body.style.overflow = '';
+        }
+    });
+}
+
+video();
+
+
 // Modal
 
 const modalTrigger = document.querySelectorAll('[data-modal]'),
@@ -168,3 +194,5 @@ new Swiper('.swiper', {
         }
     }
 });
+
+
