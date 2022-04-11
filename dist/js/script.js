@@ -105,11 +105,14 @@ const sliders = (slides, dir, prev, next) => {
             items[slideIndex - 1].classList.remove('slideInRight');
             items[slideIndex - 1].classList.add('slideInLeft');
         });
+
     } catch (e) {}
 };
 
 sliders('.galery__item-desctop', '', '.galery__arrow-prev--desctop', '.galery__arrow-next--desctop');
 sliders('.galery__item-mobile', '', '.galery__arrow-prev--mobile', '.galery__arrow-next--mobile');
+
+
 
 // Видео
 
@@ -161,7 +164,7 @@ function closeModal() {
 }
 
 overlay.addEventListener('click', (e) => {
-    if ( e.target.getAttribute('data-close') == "") {
+    if (e.target === overlay || e.target.getAttribute('data-close') == "") {
         closeModal();
     }
 });

@@ -46,6 +46,7 @@ video {
     height: auto;
 }
 
+
 .main {
     position: relative;
     &::before {
@@ -100,6 +101,8 @@ video {
     visibility: visible !important;
     opacity: 1 !important;
 }
+
+
 
 
 @import 'blocks/header';

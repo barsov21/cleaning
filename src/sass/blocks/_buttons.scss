@@ -8,4 +8,8 @@
     border: none;
     cursor: pointer;
     color: #ffffff;
+    transition: 0.3s;
+    &:hover {
+        transform: scale(0.95);
+    }
 }
