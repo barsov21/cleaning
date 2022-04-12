@@ -60,6 +60,42 @@ for (let i = 0; i < acc.length; i++) {
     });
 }
 
+// Modal
+
+const modalTrigger = document.querySelectorAll('[data-modal]'),
+    overlay = document.querySelector('.overlay');
+
+modalTrigger.forEach(btn => {
+    btn.addEventListener('click', openModal);
+});
+
+function openModal() {
+    overlay.classList.add('show');
+    overlay.classList.remove('hide');
+    overlay.style.overflow = 'auto';
+    document.body.style.overflow = 'hidden';
+}
+
+
+function closeModal() {
+    overlay.classList.add('hide');
+    overlay.classList.remove('show');
+    document.body.style.overflow = '';
+}
+
+overlay.addEventListener('click', (e) => {
+    if (e.target === overlay || e.target.getAttribute('data-close') == "") {
+        closeModal();
+    }
+});
+
+document.addEventListener('keydown', (e) => {
+    if (e.code == "Escape" && overlay.classList.contains('show')) {
+        closeModal();
+    }
+});
+
+
 // Slider
 
 const sliders = (slides, dir, prev, next) => {
@@ -90,6 +126,7 @@ const sliders = (slides, dir, prev, next) => {
         showSlides(slideIndex += n);
     }
 
+
     try {
         const prevBtn = document.querySelector(prev),
             nextBtn = document.querySelector(next);
@@ -104,6 +141,36 @@ const sliders = (slides, dir, prev, next) => {
             plusSlides(1);
             items[slideIndex - 1].classList.remove('slideInRight');
             items[slideIndex - 1].classList.add('slideInLeft');
+        });
+
+        let initialPoint;
+        let finalPoint;
+        items.forEach(item => {
+            item.addEventListener('touchstart', (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                initialPoint = e.changedTouches[0];
+            }, false);
+        });
+        items.forEach(item => {
+            item.addEventListener('touchend', (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                finalPoint = e.changedTouches[0];
+                let xAbs = Math.abs(initialPoint.pageX - finalPoint.pageX);
+                let yAbs = Math.abs(initialPoint.pageY - finalPoint.pageY);
+                if (xAbs > 20 || yAbs > 20) {
+                    if (xAbs > yAbs) {
+                        if (finalPoint.pageX < initialPoint.pageX) {
+                            plusSlides(-1);
+                            items[slideIndex - 1].style.transition = '.3s all';
+                        } else {
+                            plusSlides(1);
+                            items[slideIndex - 1].style.transition = '.3s all';
+                        }
+                    }
+                }
+            }, false);
         });
 
     } catch (e) {}
@@ -140,40 +207,6 @@ function video() {
 video();
 
 
-// Modal
-
-const modalTrigger = document.querySelectorAll('[data-modal]'),
-    overlay = document.querySelector('.overlay');
-
-modalTrigger.forEach(btn => {
-    btn.addEventListener('click', openModal);
-});
-
-function openModal() {
-    overlay.classList.add('show');
-    overlay.classList.remove('hide');
-    overlay.style.overflow = 'auto';
-    document.body.style.overflow = 'hidden';
-}
-
-
-function closeModal() {
-    overlay.classList.add('hide');
-    overlay.classList.remove('show');
-    document.body.style.overflow = '';
-}
-
-overlay.addEventListener('click', (e) => {
-    if (e.target === overlay || e.target.getAttribute('data-close') == "") {
-        closeModal();
-    }
-});
-
-document.addEventListener('keydown', (e) => {
-    if (e.code == "Escape" && overlay.classList.contains('show')) {
-        closeModal();
-    }
-});
 
 
 new Swiper('.swiper', {
