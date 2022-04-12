@@ -63,7 +63,7 @@ for (let i = 0; i < acc.length; i++) {
 // Modal
 
 const modalTrigger = document.querySelectorAll('[data-modal]'),
-    overlay = document.querySelector('.overlay');
+      overlay = document.querySelector('.overlay');
 
 modalTrigger.forEach(btn => {
     btn.addEventListener('click', openModal);
@@ -145,16 +145,14 @@ const sliders = (slides, dir, prev, next) => {
 
         let initialPoint;
         let finalPoint;
-        items.forEach(item => {
+        items.forEach((item) => {
             item.addEventListener('touchstart', (e) => {
-                e.preventDefault();
                 e.stopPropagation();
                 initialPoint = e.changedTouches[0];
             }, false);
         });
         items.forEach(item => {
             item.addEventListener('touchend', (e) => {
-                e.preventDefault();
                 e.stopPropagation();
                 finalPoint = e.changedTouches[0];
                 let xAbs = Math.abs(initialPoint.pageX - finalPoint.pageX);
@@ -163,10 +161,8 @@ const sliders = (slides, dir, prev, next) => {
                     if (xAbs > yAbs) {
                         if (finalPoint.pageX < initialPoint.pageX) {
                             plusSlides(-1);
-                            items[slideIndex - 1].style.transition = '.3s all';
                         } else {
                             plusSlides(1);
-                            items[slideIndex - 1].style.transition = '.3s all';
                         }
                     }
                 }
