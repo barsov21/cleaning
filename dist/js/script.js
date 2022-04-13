@@ -117,6 +117,7 @@ const sliders = (slides, dir, prev, next) => {
             item.style.display = 'none';
         });
 
+        // items[slideIndex - 1].style.transition = '0.8s all';
         items[slideIndex - 1].style.display = 'block';
     }
 
@@ -139,8 +140,8 @@ const sliders = (slides, dir, prev, next) => {
 
         nextBtn.addEventListener('click', () => {
             plusSlides(1);
-            items[slideIndex - 1].classList.remove('slideInRight');
-            items[slideIndex - 1].classList.add('slideInLeft');
+            items[slideIndex - 1].classList.remove('slideInLeft');
+            items[slideIndex - 1].classList.add('slideInRight');
         });
 
         let initialPoint;
